@@ -1,11 +1,12 @@
-# Debianization for the Apache Kafka server
+# Debianization for the Apache Kafka 1.0 server
 
-The repo contains so called DEBIAN directory with
-scripts and configs needed to package the
-[Apache Kafka](http://kafka.apache.org/) server
-into a DEB package for the Debian Jessie distro.
+The repository contains so called DEBIAN directory containing the scripts and configs files needed to package the
+[Apache Kafka](http://kafka.apache.org/) server into a DEB package for the Debian Jessie distro.
 
-The specs are adapted to pre-built Apache Kafka.
+Waiting for a debian mantainer to adopt this package, this repository will rely on the original
+binary distribution of Kafka 1.0 (and later).
+
+Using this repository, you will be able to have an Apache Kafka debian package fully working for easy deploys into your clusters.
 
 ## Short DEB-packaging HowTo
 
