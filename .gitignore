@@ -1,1 +1,7 @@
 *~
+bin/
+config/
+libs/
+site-docs/
+LICENSE
+NOTICE
