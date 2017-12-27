@@ -1,5 +1,6 @@
 version=3
 #opts=pgpsigurlmangle=s/$/.asc/ \
-# For source package:
-#  http://mirror.hosting90.cz/apache/kafka/([0-9\.]+)/kafka-(.+)-src\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
-http://mirror.hosting90.cz/apache/kafka/([0-9\.]+)/kafka_[0-9\.]+-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+#For source package:
+# http://mirror.hosting90.cz/apache/kafka/([0-9\.]+)/kafka-(.+)-src\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+# http://mirror.hosting90.cz/apache/kafka/([0-9\.]+)/kafka_[0-9\.]+-(.+)\.(?:zip|tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz)))
+http://mirror.hosting90.cz/apache/kafka/([0-9\.]+)/kafka_2\.11-(.+)\.tgz
