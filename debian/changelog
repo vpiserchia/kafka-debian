@@ -1,8 +1,13 @@
 kafka (1.1.0-1) unstable; urgency=low
 
-  * New upstream version
+  * New upstream version, thanks to Vito Piserchia <vpiserchia@gmail.com>
+  * odified README.md to accomodate the version change
+  * Adding tags to the repository, so that old versions may be searched
+  * Emptied the topics.conf file
+  * Added Support for Oracle JRE
+  * Adding a few wrappers in the PATH
 
- -- Vito Piserchia <vpiserchia@gmail.com>  Fri, 25 May 2018 10:40:00 +0100
+ -- Massimo Cetra <mcetra@gmail.com>  Wed, 20 Jun 2018 02:12:00 +0100
 
 kafka (1.0.0-1) unstable; urgency=low
 

@@ -1,8 +1,20 @@
 config/*.properties /etc/kafka
 bin/*.sh /usr/lib/kafka/bin
 libs/*.jar /usr/lib/kafka/libs
+
+debian/bin/configure-topics.sh /usr/share/kafka
+debian/bin/topics.conf /etc/kafka
+
 debian/wrappers/kafka-topics /usr/bin
 debian/wrappers/kafka-console-producer /usr/bin
 debian/wrappers/kafka-console-consumer /usr/bin
-debian/bin/configure-topics.sh /usr/share/kafka
-debian/bin/topics.conf /etc/kafka
+
+debian/wrappers/kafka-acls /usr/bin
+debian/wrappers/kafka-broker-api-versions /usr/bin
+debian/wrappers/kafka-configs /usr/bin
+debian/wrappers/kafka-console-consumer /usr/bin
+debian/wrappers/kafka-console-producer /usr/bin
+debian/wrappers/kafka-consumer-groups /usr/bin
+debian/wrappers/kafka-delete-records /usr/bin
+debian/wrappers/kafka-run-class /usr/bin
+debian/wrappers/kafka-topics /usr/bin
