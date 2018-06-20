@@ -1,3 +1,9 @@
+kafka (1.1.0-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Vito Piserchia <vpiserchia@gmail.com>  Fri, 25 May 2018 10:40:00 +0100
+
 kafka (1.0.0-1) unstable; urgency=low
 
   * New upstream version
