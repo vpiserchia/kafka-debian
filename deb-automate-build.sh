@@ -5,7 +5,7 @@
 # This script is an utility to automate the building of the
 # kafka package.
 
-sudo apt-get -y install dpkg-dev debhelper dh-systemd devscripts
+sudo apt-get -y install dpkg-dev debhelper dh-systemd devscripts libwww-perl
 
 rm -f ../kafka*.orig.tar.gz
 uscan -v --download-current-version
