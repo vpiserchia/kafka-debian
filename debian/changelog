@@ -1,3 +1,9 @@
+kafka (2.0.0-0~mc1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Massimo Cetra <mcetra@gmail.com>  Wed, 06 Aug 2018 18:52:00 +0100
+
 kafka (1.1.1-0~mc1) unstable; urgency=low
 
   * New upstream version
