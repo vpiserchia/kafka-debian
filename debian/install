@@ -18,3 +18,5 @@ debian/wrappers/kafka-consumer-groups /usr/bin
 debian/wrappers/kafka-delete-records /usr/bin
 debian/wrappers/kafka-run-class /usr/bin
 debian/wrappers/kafka-topics /usr/bin
+
+debian/configs/kafka-limits.conf /etc/security/limits.d/
