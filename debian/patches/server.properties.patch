@@ -1,20 +1,22 @@
---- a/config/server.properties	2020-06-25 14:58:51.953497463 +0200
-+++ b/config/server.properties	2020-06-25 15:01:10.307987345 +0200
+--- a/config/server.properties	2020-04-08 03:13:18.000000000 +0200
++++ b/config/server.properties	2020-06-25 16:03:29.911080808 +0200
 @@ -57,7 +57,7 @@
  ############################# Log Basics #############################
  
  # A comma separated list of directories under which to store log files
 -log.dirs=/tmp/kafka-logs
-+log.dirs=/var/log/kafka
++log.dirs=/var/lib/kafka
  
  # The default number of log partitions per topic. More partitions allow greater
  # parallelism for consumption, but this will also result in more files across
-@@ -131,6 +131,4 @@
+@@ -130,7 +130,6 @@
+ 
  # The following configuration specifies the time, in milliseconds, that the GroupCoordinator will delay the initial consumer rebalance.
  # The rebalance will be further delayed by the value of group.initial.rebalance.delay.ms as new members join the group, up to a maximum of max.poll.interval.ms.
- # The default value for this is 3 seconds.
+-# The default value for this is 3 seconds.
 -# We override this to 0 here as it makes for a better out-of-the-box experience for development and testing.
 +# For a better out-of-the-box experience for development and testing this can be reduced to 0.
--# However, in production environments the default value of 3 seconds is more suitable as this will help to avoid unnecessary, and potentially expensive, rebalances during application startup.
+ # However, in production environments the default value of 3 seconds is more suitable as this will help to avoid unnecessary, and potentially expensive, rebalances during application startup.
 -group.initial.rebalance.delay.ms=0
 +group.initial.rebalance.delay.ms=3000
+
