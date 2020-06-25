@@ -4,6 +4,12 @@ kafka (2.5.0-0~mc1) unstable; urgency=low
 
  -- Massimo Cetra <mcetra@gmail.com>  Sun, 23 Apr 2020 12:20:18 +0100
 
+kafka (2.4.0-0~vp1) unstable; urgency=low
+
+  * New upstream version
+
+ -- Vito Piserchia <vpiserchia@gmail.com>  Sun, 23 Feb 2020 20:27:56 +0100
+
 kafka (2.3.0-0~mc1) unstable; urgency=low
 
   * New upstream version
