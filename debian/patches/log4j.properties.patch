@@ -1,26 +1,34 @@
---- a/config/log4j.properties
-+++ b/config/log4j.properties
-@@ -15,7 +15,7 @@
+--- a/config/log4j.properties	2020-06-25 14:58:51.953497463 +0200
++++ b/config/log4j.properties	2020-06-25 15:10:38.949779804 +0200
+@@ -14,8 +14,8 @@
+ # limitations under the License.
  
- kafka.logs.dir=logs
- 
--log4j.rootLogger=INFO, stdout 
-+log4j.rootLogger=WARN, stdout 
+ # Unspecified loggers and loggers with additivity=true output to server.log and stdout
+-# Note that INFO only applies to unspecified loggers, the log level of the child logger is used otherwise
+-log4j.rootLogger=INFO, stdout, kafkaAppender
++# Note that WARN only applies to unspecified loggers, the log level of the child logger is used otherwise
++log4j.rootLogger=WARN, stdout, kafkaAppender
  
  log4j.appender.stdout=org.apache.log4j.ConsoleAppender
  log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
-@@ -57,7 +57,7 @@
- #log4j.logger.kafka.perf=DEBUG, kafkaAppender
- #log4j.logger.kafka.perf.ProducerPerformance$ProducerThread=DEBUG, kafkaAppender
- #log4j.logger.org.I0Itec.zkclient.ZkClient=DEBUG
--log4j.logger.kafka=INFO, kafkaAppender
-+log4j.logger.kafka=WARN, kafkaAppender
+@@ -58,11 +58,11 @@
+ log4j.appender.authorizerAppender.layout.ConversionPattern=[%d] %p %m (%c)%n
  
+ # Change the line below to adjust ZK client logging
+-log4j.logger.org.apache.zookeeper=INFO
++log4j.logger.org.apache.zookeeper=WARN
+ 
+ # Change the two lines below to adjust the general broker logging level (output to server.log and stdout)
+-log4j.logger.kafka=INFO
+-log4j.logger.org.apache.kafka=INFO
++log4j.logger.kafka=WARN
++log4j.logger.org.apache.kafka=WARN
+ 
+ # Change to DEBUG or TRACE to enable request logging
+ log4j.logger.kafka.request.logger=WARN, requestAppender
+@@ -76,16 +76,16 @@
  log4j.logger.kafka.network.RequestChannel$=WARN, requestAppender
  log4j.additivity.kafka.network.RequestChannel$=false
-@@ -68,11 +68,11 @@
- log4j.logger.kafka.request.logger=WARN, requestAppender
- log4j.additivity.kafka.request.logger=false
  
 -log4j.logger.kafka.controller=TRACE, controllerAppender
 +log4j.logger.kafka.controller=WARN, controllerAppender
@@ -33,3 +41,10 @@
 -log4j.logger.state.change.logger=TRACE, stateChangeAppender
 +log4j.logger.state.change.logger=WARN, stateChangeAppender
  log4j.additivity.state.change.logger=false
+ 
+-# Access denials are logged at INFO level, change to DEBUG to also log allowed accesses
+-log4j.logger.kafka.authorizer.logger=INFO, authorizerAppender
++# Access denials are logged at WARN level, change to DEBUG to also log allowed accesses
++log4j.logger.kafka.authorizer.logger=WARN, authorizerAppender
+ log4j.additivity.kafka.authorizer.logger=false
+ 
