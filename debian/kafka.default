@@ -1,4 +1,19 @@
+# Kafka configuration for server setup
+KAFKA_SERVER_CONFIG=/etc/kafka/server.properties
+
+# Kafka Heap Options
 KAFKA_HEAP_OPTS='-Xmx1G -Xms128M'
 
-JMX_PORT='9989'
+# GC Logging Options
+# note that Kafka applies defaults in case this variable is unset
+#KAFKA_GC_LOG_OPTS=""
+
+# Performance Settings
+# note that Kafka applies defaults in case this variable is unset
+#KAFKA_JVM_PERFORMANCE_OPTS=""
+
+# JMX Settings
+# note that Kafka applies defaults in case this variable is unset
+#KAFKA_JMX_OPTS=""
+#JMX_PORT="9989"
 
