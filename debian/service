@@ -7,11 +7,18 @@ Type=simple
 User=kafka
 Group=kafka
 UMask=0077
-Environment="KAFKA_HEAP_OPTS=-Xmx1G -Xms128M"
+EnvironmentFile=-/etc/default/kafka
 ExecStart=/usr/lib/kafka/bin/kafka-server-start.sh /etc/kafka/server.properties
 ExecReload=/bin/kill -HUP $MAINPID
 Restart=on-failure
 RestartSec=1
+
+# Limits
+# system limits must be specified via systemd...
+LimitMEMLOCK=infinity
+LimitNOFILE=100000
+LimitAS=infinity
+LimitNPROC=8096
 
 [Install]
 WantedBy=multi-user.target

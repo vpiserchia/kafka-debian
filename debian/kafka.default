@@ -1,0 +1,4 @@
+KAFKA_HEAP_OPTS='-Xmx1G -Xms128M'
+
+JMX_PORT='9989'
+
